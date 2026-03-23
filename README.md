@@ -1,38 +1,35 @@
-# SafeSync 🛡️
+# STRIX 🦉
 
-SafeSync adalah aplikasi Android peran ganda (dual-role) yang dirancang untuk pemantauan tingkat lanjut dan sinkronisasi data antara dua perangkat (Host dan Client). Aplikasi ini dilengkapi dengan fitur **Stealth Mode** (Mode Penyamaran) bersenjatakan beberapa antarmuka aplikasi bohongan yang berfungsi penuh (seperti Kalkulator, Jam, Catatan, dan Cuaca) untuk menyamarkan operasinya pada perangkat target.
+STRIX itu aplikasi Android 2-in-1 (bisa jadi yang mantau, bisa juga yang dipantau) buat ngetrack dan nyedot data HP target dari jarak jauh. Kerennya, aplikasi ini punya fitur **Mode Samaran (Stealth)** yang bikin icon dan daleman aplikasinya berubah 100% jadi aplikasi biasa (Kalkulator, Jam, Cuaca, atau Notes) biar target nggak curiga sama sekali!
 
-## Fitur Utama ✨
+## Fitur Mantul ✨
 
-*   **Peran Ganda (Dual Roles):** Beroperasi sebagai **Host** (Pemantau) atau **Client** (Pengirim Data) dalam satu aplikasi yang sama.
-*   **Mode Penyamaran (Stealth Camouflage):** Sebagai Client, aplikasi ini dapat secara dinamis mengubah ikon peluncur dan antarmukanya menjadi aplikasi bohongan yang dapat berfungsi normal layaknya aplikasi bawaan asli:
-    *   **Kalkulator:** Kalkulator bersistem hitung matematika secara nyata.
-    *   **Jam:** Layar jam digital aktual.
-    *   **Catatan:** Papan teks catatan (Notes) asli.
-    *   **Cuaca:** Antarmuka simulasi suhu dan cuaca.
-*   **Pemicu Pembuka Rahasia (Secret Unlock Trigger):** Layar antarmuka bohongan (Client) hanya bisa ditembus menggunakan sentuhan fisik atau kode spesifik rahasia (contoh: mengetik `8888` lalu menekan tombol `=` pada kalkulator, atau menekan tahan/long-press teks suhu derajat angka celcius).
-*   **Balasan Bayangan (Phantom Reply):** Host bisa membalas langsung secara jarak jauh untuk semua pesan target yang baru masuk (baik dari WhatsApp, Telegram, dll) secara senyap, tanpa harus membuka aplikasi pengirim asal pada perangkat target.
-*   **Sinkronisasi Waktu-Nyata (Real-time Sync):** Secara otomatis mengirimkan Lokasi Perangkat, SMS, Riwayat Panggilan, Daftar Kontak, Daftar Aplikasi, Info Jaringan WiFi, laporan perekam layar ketikan (Keylogger), hingga membuang total Log Notifikasi target per harinya lewat cloud Firebase berkecepatan tinggi.
+*   **Bisa Jadi Dua Peran:** Tinggal pilih mau HP ini jadi **Host** (Si Pemantau) atau **Client** (Target yang dipantau).
+*   **Mode Penyamaran (Stealth):** Kalau dipasang di HP target, wujud aplikasinya bisa berubah total jadi:
+    *   **Kalkulator:** Bisa dipake ngitung beneran.
+    *   **Jam:** Layar jam digital asli.
+    *   **Catatan:** Aplikasi nulis note biasa.
+    *   **Cuaca:** Tampilan suhu cuaca.
+*   **Cara Buka Sandi Rahasia:** Biar target nggak sengaja buka rahasia, menu aslinya cuma bisa kebuka kalau kamu tau triknya (misal: ngetik `8888` trus tekan `=` di kalkulator, atau teken tahan angka cuaca agak lama).
+*   **Balas Pesan Diem-diem (Phantom Reply):** Sebagai Host, kamu bisa langsung balesin chat WhatsApp/Telegram yang masuk ke HP target dari jauh tanpa ketahuan!
+*   **Nyedot Data Real-time:** Aplikasi ini otomatis ngirim rute Lokasi, SMS, Log Telpon, Kontak, Daftar Aplikasi, Info WiFi, rekaman ketikan keyboard (Keylogger), sampe isi semua Notifikasi target langsung ke database (Firebase) kamu.
 
-## Panduan Pemasangan & Konfigurasi Firebase Sendiri ⚙️
+## Cara Setting Server (Firebase) Sendiri ⚙️
 
-**Untuk jaminan keamanan privasi lalu-lintas data anda dari sisi server**, sangat direkomendasikan dan disarankan mengatur repositori Google Firebase pribadi Anda sendiri.
+Biar data target kamu aman dan masuk ke server pribadimu, mendingan bikin database Firebase sendiri. Gampang kok:
 
-1.  **Buat Proyek Firebase Baru:** Gunakan akun anda di [Firebase Console](https://console.firebase.google.com/) dan buat proyek baru.
-2.  **Aktifkan Layanan Ekstraksi Data:** Pastikan komponen integrasinya (**Firestore Database** diletakan pada skema Test Mode, Service **Authentication** tercentang khusus pada Anonymous Mode, dan Cloud **Storage**) telah dinyalakan aktif.
-3.  **Tambahkan Aplikasi Android Anda:** Daftarkan perizinan komunikasi aplikasi Client Anda ke peladen (server) proyek Firebase dengan mengisi Package Name: `com.strix.safesync`.
-4.  **Impor Berkas (Download) JSON Konfigurasi:** Taruh file verifikasi unik `google-services.json` ke folder/direktori internal Android Studio `app/` di proyek strix-lokasi Anda ini, sehingga ia merujuk otentikasi kompilasi build kepada firebase masing-masing individu secara merdeka.
-5.  **Alternatif (Ubah Konfigurasi Otomatis Non-Recompile):** Anda dapat menekan "Server Guide" persis di dalam menu awal mode aplikasi tanpa perlu melakukan instruksi kompilasi baris kode. Letakan *App-Id* dan *Web-Api-Key* maka otomatis teralokasi langsung.
+1.  Buka web [Firebase Console](https://console.firebase.google.com/) pake akun Google kamu, trus bikin *Project* baru.
+2.  Nyalain 3 fitur penting ini: **Firestore Database** (pilih Test Mode), **Authentication** (nyalain Anonymous Mode), sama **Storage**.
+3.  Daftarin aplikasi Android kamu di situ (masukin Package Name: `com.strix.safesync`).
+4.  Download file sakti `google-services.json` dan taro di folder `app/` di proyek kamu ini.
+5.  Atau kalau males ribet, buka aja aplikasi STRIX kamu, klik "Server Guide" di layar awal, masukin *App-Id* dan *Web-Api-Key* dari Firebase, kelar deh!
 
-## Ketentuan Penggunaan & Peringatan Google Play Protect ⚠️
+## Awas Kena Google Play Protect! ⚠️
 
-**Penting:** Karena SafeSync meretas aktivitas menggunakan hak jalan Service Latar Belakang (Foreground/Background Services) yang bersifat agresif, mengakses berbagai lapisan keamanan perangkat paling sensitif, menggunakan layanan **Aksesibilitas (Keylogger)** secara paksa, dan berkapabilitas untuk mengubah wujud sekaligus memutus ikon aslinya; maka **Google Play Protect AKAN MENANDAINYA sebagai Stalkerware/Spyware/Malware berbahaya bertaraf merah**.
+**Penting nih:** Karena STRIX ini fungsinya agak "nyerempet", kerjanya sembunyi-sembunyi di belakang layar, dan pake izin akses berat (kayak Keylogger dan Lokasi), **Google Play Protect pasti bakal jelek-jelekin aplikasi ini sebagai Spyware/Malware.**
 
-*   Agar perangkat anda menghindari blokade instalasi protektif otomatis, buka setelan Google Play Store target -> Tekan menu akun **Play Protect** -> Pergi dan tekan icon roda gigi pojok (⚙️) Setup Options -> **Wajib mematikan saklar centang "Pindai aplikasi dengan Play Protect (Scan apps with Play Protect)"**.
-*   Proyek repository ini ditujukan semata-mata khusus bagi instrumen **Tujuan Edukasi** riset keamanan Siber serta pemantauan pengujian perangkat berbasis ikatan persetujuan resmi lokal yang sah (contoh valid: *parental control* perangkat). Segala tindakan penggunaan fungsionalitas di luar pertanggung-jawaban resmi adalah mutlak perbuatan oknum developer penyalahguna.
-
-## Kontribusi
-Kami menerangkan tangan terbuka lebar menerima diskusi revisi format kode kolaboratif. Tolong luangkan berdiskusi pada panggung isu perihal komplain masalah sebelum semena-mena merekomendasikan sebuah Pull Request baru untuk menambal aplikasi dalam rasio modifikasi level atas.
+*   Biar HP target mau di-install, kamu **WAJIB** ke Play Store -> klik Profil -> **Play Protect** -> klik ikon gir (⚙️) -> **Matiin fitur "Scan apps with Play Protect"**.
+*   Proyek ini cuma buat **Edukasi** atau pantau HP anak/adik yang emang udah janjian. Kalau dipakai buat hal aneh-aneh (nyadap pacar, dsb), risiko ditanggung penumpang ya, developernya nggak ikutan!
 
 ## Lisensi
-Berlisensi penuh oleh MIT License
+MIT License bebas pakai 🍻
