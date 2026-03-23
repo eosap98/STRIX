@@ -48,7 +48,7 @@ Sebelum mulai dipakai, **Wajib** mengaktifkan 3 layanan berikut di panel sebelah
 
 **Penting:** Karena STRIX ini fungsinya di latar belakang dan izin akses berat (Keylogger dan Lokasi), **Google Play Protect detect aplikasi ini sebagai Spyware/Malware.**
 
-*   Cara install, **WAJIB** ke Play Store -> klik Profil -> **Play Protect** -> klik ikon gir (⚙️) -> **Matiin fitur "Scan apps with Play Protect"**.
+*   Cara install, **WAJIB** ke Play Store -> klik Profil -> **Play Protect** -> klik ikon gir (⚙️) -> **Matiin fitur "Scan apps with Play Protect"**. **WAJIB** Aktifkan Special apps/access notification & accessibility untuk aplikasi ini di pengaturan hp TARGET/CLIENT
 *   Proyek ini *HANYA* Untuk **Edukasi** atau pantau HP anak/family yang memang sudah janjian! Jika dipakai untuk hal menyimpang (nyadap pacar, dsb) tanpa ada kesepakatan, risiko ditanggung sendiri!, **DEVELOPER TIDAK BERTANGGUNG JAWAB ATAS PENYALAHGUNAAN APLIKASI INI!**
 
 ## Lisensi
