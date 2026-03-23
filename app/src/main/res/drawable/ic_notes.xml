@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+  <!-- Yellow background -->
+  <path android:fillColor="#FDD835"
+      android:pathData="M16,10 L92,10 Q98,10 98,16 L98,92 Q98,98 92,98 L16,98 Q10,98 10,92 L10,16 Q10,10 16,10 Z"/>
+  <!-- White paper -->
+  <path android:fillColor="#FFFFFF"
+      android:pathData="M24,20 L84,20 L84,88 L24,88 Z"/>
+  <!-- Lines -->
+  <path android:fillColor="#E0E0E0"
+      android:pathData="M32,32 L76,32 L76,35 L32,35 Z"/>
+  <path android:fillColor="#E0E0E0"
+      android:pathData="M32,44 L76,44 L76,47 L32,47 Z"/>
+  <path android:fillColor="#E0E0E0"
+      android:pathData="M32,56 L76,56 L76,59 L32,59 Z"/>
+  <path android:fillColor="#E0E0E0"
+      android:pathData="M32,68 L60,68 L60,71 L32,71 Z"/>
+  <!-- Pencil icon -->
+  <path android:fillColor="#FDD835"
+      android:pathData="M68,62 L80,74 L72,80 L60,68 Z"/>
+  <path android:fillColor="#F57F17"
+      android:pathData="M76,58 L84,66 L80,74 L68,62 Z"/>
+  <path android:fillColor="#BDBDBD"
+      android:pathData="M72,80 L78,84 L80,74 Z"/>
+</vector>
