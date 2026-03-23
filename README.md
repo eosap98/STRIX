@@ -13,7 +13,7 @@ STRIX adalah aplikasi Monitoring tool Android
 
 ## Cara Setting Private Server (Firebase) ⚙️
 
-1.  Buka web [Firebase Console](https://console.firebase.google.com/) pake akun Google kamu, trus bikin *Project* baru.
+1.  Buka web [Firebase Console](https://console.firebase.google.com/) lalu buat *Project* baru.
 2.  Nyalakan **Firestore Database** (pilih Test Mode), **Authentication** (nyalain Anonymous Mode)
 3.  Daftar aplikasi dengan Package Name: `com.strix.safesync`.
 4.  Download file `google-services.json` dan taroh di folder `app/`
@@ -21,10 +21,10 @@ STRIX adalah aplikasi Monitoring tool Android
 
 ## Google Play Protect! ⚠️
 
-**Penting:** Karena STRIX ini fungsinya agak "nyerempet", kerjanya sembunyi-sembunyi di belakang layar, dan pake izin akses berat (Keylogger dan Lokasi), **Google Play Protect detect aplikasi ini sebagai Spyware/Malware.**
+**Penting:** Karena STRIX ini fungsinya di latar belakang dan izin akses berat (Keylogger dan Lokasi), **Google Play Protect detect aplikasi ini sebagai Spyware/Malware.**
 
-*   Biar HP target mau di-install, kamu **WAJIB** ke Play Store -> klik Profil -> **Play Protect** -> klik ikon gir (⚙️) -> **Matiin fitur "Scan apps with Play Protect"**.
-*   Proyek ini cuma buat **Edukasi** atau pantau HP anak/adik yang emang udah janjian. Kalau dipakai buat hal aneh-aneh (nyadap pacar, dsb), risiko ditanggung penumpang ya, developernya nggak ikutan!
+*   Cara install, **WAJIB** ke Play Store -> klik Profil -> **Play Protect** -> klik ikon gir (⚙️) -> **Matiin fitur "Scan apps with Play Protect"**.
+*   Proyek ini *HANYA* Untuk **Edukasi** atau pantau HP anak/family yang memang sudah janjian! Kalau dipakai buat hal menyimpang (nyadap pacar, dsb) tanpa ada kesepakatan, risiko ditanggung sendiri!, **DEVELOPER TIDAK BERTANGGUNG JAWAB ATAS PENYALAHGUNAAN APLIKASI INI!**
 
 ## Lisensi
 MIT License bebas pakai 🍻
