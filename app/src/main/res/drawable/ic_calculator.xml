@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="M20,10 L88,10 Q98,10 98,20 L98,88 Q98,98 88,98 L20,98 Q10,98 10,88 L10,20 Q10,10 20,10 Z"/>
+  <path
+      android:fillColor="#2196F3"
+      android:pathData="M16,10 L92,10 Q98,10 98,16 L98,92 Q98,98 92,98 L16,98 Q10,98 10,92 L10,16 Q10,10 16,10 Z"/>
+  <!-- Display area -->
+  <path
+      android:fillColor="#1565C0"
+      android:pathData="M18,18 L90,18 L90,40 L18,40 Z"
+      android:strokeColor="#FFFFFF"
+      android:strokeWidth="0"/>
+  <!-- Display text: 0 -->
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="M70,22 L88,22 L88,36 L70,36 Z"
+      android:fillAlpha="0.3"/>
+  <!-- Button grid - row 1 -->
+  <path android:fillColor="#1E88E5"
+      android:pathData="M18,46 L30,46 Q32,46 32,48 L32,58 Q32,60 30,60 L18,60 Q16,60 16,58 L16,48 Q16,46 18,46 Z"/>
+  <path android:fillColor="#1E88E5"
+      android:pathData="M36,46 L48,46 Q50,46 50,48 L50,58 Q50,60 48,60 L36,60 Q34,60 34,58 L34,48 Q34,46 36,46 Z"/>
+  <path android:fillColor="#1E88E5"
+      android:pathData="M54,46 L66,46 Q68,46 68,48 L68,58 Q68,60 66,60 L54,60 Q52,60 52,58 L52,48 Q52,46 54,46 Z"/>
+  <path android:fillColor="#FF7043"
+      android:pathData="M72,46 L90,46 Q92,46 92,48 L92,58 Q92,60 90,60 L72,60 Q70,60 70,58 L70,48 Q70,46 72,46 Z"/>
+  <!-- Button grid - row 2 -->
+  <path android:fillColor="#1E88E5"
+      android:pathData="M18,64 L30,64 Q32,64 32,66 L32,76 Q32,78 30,78 L18,78 Q16,78 16,76 L16,66 Q16,64 18,64 Z"/>
+  <path android:fillColor="#1E88E5"
+      android:pathData="M36,64 L48,64 Q50,64 50,66 L50,76 Q50,78 48,78 L36,78 Q34,78 34,76 L34,66 Q34,64 36,64 Z"/>
+  <path android:fillColor="#1E88E5"
+      android:pathData="M54,64 L66,64 Q68,64 68,66 L68,76 Q68,78 66,78 L54,78 Q52,78 52,76 L52,66 Q52,64 54,64 Z"/>
+  <path android:fillColor="#FF7043"
+      android:pathData="M72,64 L90,64 Q92,64 92,66 L92,76 Q92,78 90,78 L72,78 Q70,78 70,76 L70,66 Q70,64 72,64 Z"/>
+  <!-- Button grid - row 3 -->
+  <path android:fillColor="#1E88E5"
+      android:pathData="M18,82 L30,82 Q32,82 32,84 L32,92 Q32,94 30,94 L18,94 Q16,94 16,92 L16,84 Q16,82 18,82 Z"/>
+  <path android:fillColor="#1E88E5"
+      android:pathData="M36,82 L48,82 Q50,82 50,84 L50,92 Q50,94 48,92 L48,92 Q48,94 48,94 L36,94 Q34,94 34,92 L34,84 Q34,82 36,82 Z"/>
+  <path android:fillColor="#1E88E5"
+      android:pathData="M54,82 L66,82 Q68,82 68,84 L68,92 Q68,94 66,94 L54,94 Q52,94 52,92 L52,84 Q52,82 54,82 Z"/>
+  <path android:fillColor="#4CAF50"
+      android:pathData="M72,82 L90,82 Q92,82 92,84 L92,92 Q92,94 90,94 L72,94 Q70,94 70,92 L70,84 Q70,82 72,82 Z"/>
+</vector>

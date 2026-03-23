@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+  <!-- Background circle -->
+  <path android:fillColor="#1A237E"
+      android:pathData="M54,10 A44,44 0 1,1 53.999,10 Z"/>
+  <!-- White clock face -->
+  <path android:fillColor="#FFFFFF"
+      android:pathData="M54,14 A40,40 0 1,1 53.999,14 Z"/>
+  <!-- Clock hands -->
+  <path android:fillColor="#1A237E" android:strokeWidth="3"
+      android:pathData="M54,54 L54,28" android:strokeColor="#1A237E"/>
+  <path android:fillColor="#1A237E" android:strokeWidth="3"
+      android:pathData="M54,54 L72,54" android:strokeColor="#1A237E"/>
+  <path android:fillColor="#E53935"
+      android:pathData="M52,52 A3,3 0 1,1 51.999,52 Z"/>
+  <!-- Hour markers -->
+  <path android:fillColor="#1A237E"
+      android:pathData="M54,16 L55,22 L53,22 Z"/>
+  <path android:fillColor="#1A237E"
+      android:pathData="M54,86 L55,92 L53,92 Z"/>
+  <path android:fillColor="#1A237E"
+      android:pathData="M16,53 L22,54 L22,56 Z"/>
+  <path android:fillColor="#1A237E"
+      android:pathData="M86,53 L92,54 L92,56 Z"/>
+</vector>
