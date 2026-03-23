@@ -1,14 +1,14 @@
 # STRIX 🦉
 
-STRIX adalah aplikasi Android untuk Melakukan Pemantauan HP
+STRIX adalah aplikasi Monitoring tool Android
 
 ## Fitur ✨
 
-*   **Bisa Jadi Dua Peran:** **Host** (Pemantau) atau **Client** (Target yang dipantau).
-*   **Mode Penyamaran (Stealth):** wujud aplikasinya bisa berubah total jadi:
+*   **Pilih Role:** **Host** (Pemantau) atau **Client** (Target yang dipantau).
+*   **Mode Penyamaran (Stealth):** icon aplikasinya bisa berubah total jadi:
     *   **Kalkulator:** Bisa dipake ngitung beneran.
-*   **Cara Buka Sandi Rahasia:** ketik `8888` trus tekan `=`
-*   **Balas Pesan Diem-diem (Phantom Reply):** Sebagai Host, bisa langsung bales chat WhatsApp/Telegram yang masuk ke HP target dari jauh tanpa ketahuan!
+*   **Cara Buka Sandi Rahasia:** ketik `8888='
+*   **Phantom Reply:** Sebagai Host, bisa langsung balas chat WhatsApp/Telegram yang masuk ke HP target dari jauh tanpa ketahuan!
 *   **Data Real-time:** Aplikasi ini otomatis mengirim rute Lokasi, SMS, Log Telpon, Kontak, Daftar Aplikasi, Info WiFi, rekaman ketikan keyboard (Keylogger), sampe isi semua Notifikasi target langsung ke database (Firebase) kamu.
 
 ## Cara Setting Private Server (Firebase) ⚙️
@@ -17,9 +17,9 @@ STRIX adalah aplikasi Android untuk Melakukan Pemantauan HP
 2.  Nyalakan **Firestore Database** (pilih Test Mode), **Authentication** (nyalain Anonymous Mode)
 3.  Daftar aplikasi dengan Package Name: `com.strix.safesync`.
 4.  Download file `google-services.json` dan taroh di folder `app/`
-5.  Atau kalau males ribet, buka aja aplikasi STRIX kamu, klik "Server Guide" di layar awal, masukin *App-Id* dan *Web-Api-Key* dari Firebase, kelar deh!
+5.  setup aplikasi STRIX melalui "Costum Server" di layar awal, masukkan *App-Id* , *Web-Api-Key* dan *Project-Id* dari Firebase.
 
-## Awas Kena Google Play Protect! ⚠️
+## Google Play Protect! ⚠️
 
 **Penting:** Karena STRIX ini fungsinya agak "nyerempet", kerjanya sembunyi-sembunyi di belakang layar, dan pake izin akses berat (Keylogger dan Lokasi), **Google Play Protect detect aplikasi ini sebagai Spyware/Malware.**
 
