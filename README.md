@@ -4,8 +4,8 @@ STRIX adalah aplikasi Android untuk Melakukan Pemantauan HP
 
 ## Fitur ✨
 
-*   **Bisa Jadi Dua Peran:** Tinggal pilih mau HP ini jadi **Host** (Pemantau) atau **Client** (Target yang dipantau).
-*   **Mode Penyamaran (Stealth):** Kalau dipasang di HP target, wujud aplikasinya bisa berubah total jadi:
+*   **Bisa Jadi Dua Peran:** **Host** (Pemantau) atau **Client** (Target yang dipantau).
+*   **Mode Penyamaran (Stealth):** wujud aplikasinya bisa berubah total jadi:
     *   **Kalkulator:** Bisa dipake ngitung beneran.
 *   **Cara Buka Sandi Rahasia:** ketik `8888` trus tekan `=`
 *   **Balas Pesan Diem-diem (Phantom Reply):** Sebagai Host, bisa langsung bales chat WhatsApp/Telegram yang masuk ke HP target dari jauh tanpa ketahuan!
