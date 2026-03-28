@@ -5,8 +5,7 @@ STRIX adalah aplikasi Monitoring tool untuk Android
 ## Fitur ✨
 
 *   **Pilih Role:** **Host** (Pemantau) atau **Client** (Target yang dipantau).
-*   **Mode Penyamaran (Stealth):** icon aplikasinya jadi **Kalkulator:**
-*   **Cara Buka Sandi Rahasia:** ketik `8888='
+*   **Mode Penyamaran (Stealth):** icon aplikasi jadi **Kalkulator(Cara Buka Sandi Rahasia: ketik `8888=')**
 *   **Phantom Reply:** Sebagai Host, bisa langsung balas chat WhatsApp/Telegram yang masuk ke HP target dari jauh tanpa ketahuan!
 *   **Data Real-time:** Aplikasi ini otomatis mengirim rute Lokasi, SMS, Log Telpon, Kontak, Daftar Aplikasi, Info WiFi, *rekaman ketikan keyboard (Keylogger)*, dan semua Notifikasi target
 
