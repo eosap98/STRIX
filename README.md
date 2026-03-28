@@ -29,11 +29,11 @@ STRIX adalah aplikasi Monitoring tool untuk Android
 ### 3. Aktifkan Layanan Firebase
 Sebelum mulai dipakai, **Wajib** mengaktifkan layanan berikut di panel sebelah kiri Firebase Console:
 1. **Authentication**:
-   - Buka menu *Build* > *Authentication* > *Get Started*.
-   - Ubah tab ke *Sign-in method*, lalu aktifkan **Anonymous** (Pengguna Anonim).
+   - Buka menu *Security* > *Authentication* > *Get Started*.
+   - Ubah tab ke *Sign-in method*, lalu aktifkan **Anonymous**.
 2. **Firestore Database**:
-   - Buka menu *Build* > *Firestore Database* > *Create database*.
-   - Pilih region, mulai dalam Mode Uji (Test Mode) -> *Update Rules* agar `allow read, write: if true;` (atau sesuaikan keamanan).
+   - Buka menu *Databases & Storage* > *Firestore Database* > *Create database*.
+   - Pilih region bebas(disarankan pilih lokasi terdekat), mulai dalam Mode production lalu ke tab **Rules** -> *Edit Rules* agar `allow read, write: if true;`.
 
 ### 4. Input di Aplikasi STRIX
 1. Buka aplikasi.
