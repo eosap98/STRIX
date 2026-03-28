@@ -5,17 +5,16 @@ STRIX adalah aplikasi Monitoring tool Android
 ## Fitur ✨
 
 *   **Pilih Role:** **Host** (Pemantau) atau **Client** (Target yang dipantau).
-*   **Mode Penyamaran (Stealth):** icon aplikasinya bisa berubah total jadi:
-    *   **Kalkulator:** Bisa dipake ngitung beneran.
+*   **Mode Penyamaran (Stealth):** icon aplikasinya jadi **Kalkulator:**
 *   **Cara Buka Sandi Rahasia:** ketik `8888='
 *   **Phantom Reply:** Sebagai Host, bisa langsung balas chat WhatsApp/Telegram yang masuk ke HP target dari jauh tanpa ketahuan!
-*   **Data Real-time:** Aplikasi ini otomatis mengirim rute Lokasi, SMS, Log Telpon, Kontak, Daftar Aplikasi, Info WiFi, rekaman ketikan keyboard (Keylogger), sampe isi semua Notifikasi target langsung ke database (Firebase) kamu.
+*   **Data Real-time:** Aplikasi ini otomatis mengirim rute Lokasi, SMS, Log Telpon, Kontak, Daftar Aplikasi, Info WiFi, *rekaman ketikan keyboard (Keylogger)*, dan semua Notifikasi target
 
 ## Cara Setting Private Server (Firebase) ⚙️
 
 ### 1. Buat Project Baru di Firebase
 1. Buka [Firebase Console](https://console.firebase.google.com/).
-2. Klik **Add project** (Tambah proyek), beri nama, dan lanjutkan sampai selesai.
+2. Klik **Add project** , beri nama, dan lanjutkan sampai selesai.
 
 ### 2. Copy Kredensial (WEB API Key, App ID, Project ID)
 1. Di halaman utama Firebase Console (dalam project yang baru dibuat), klik logo **Android** `< / >` atau ikon gear ⚙️ **Project settings** (Pengaturan Proyek).
@@ -24,10 +23,10 @@ STRIX adalah aplikasi Monitoring tool Android
 4. Di situ akan ada:
    - **App ID**
    - **Project ID**
-   - **Web API Key**: Terdapat pada bagian **General** > **Project Credentials** > Web API Key (kombinasi panjang huruf dan angka).
+   - **Web API Key**: Terdapat pada bagian **General** > **Project Credentials** > Web API Key.
 
 ### 3. Aktifkan Layanan Firebase
-Sebelum mulai dipakai, **Wajib** mengaktifkan 3 layanan berikut di panel sebelah kiri Firebase Console:
+Sebelum mulai dipakai, **Wajib** mengaktifkan layanan berikut di panel sebelah kiri Firebase Console:
 1. **Authentication**:
    - Buka menu *Build* > *Authentication* > *Get Started*.
    - Ubah tab ke *Sign-in method*, lalu aktifkan **Anonymous** (Pengguna Anonim).
@@ -46,10 +45,10 @@ Sebelum mulai dipakai, **Wajib** mengaktifkan 3 layanan berikut di panel sebelah
 
 ## Google Play Protect! ⚠️
 
-**Penting:** Karena STRIX ini fungsinya di latar belakang dan izin akses berat (Keylogger dan Lokasi), **Google Play Protect detect aplikasi ini sebagai Spyware/Malware.**
+**Penting:** Karena STRIX ini berjalan di latar belakang dan izin akses berat (Keylogger dan Lokasi), **Google Play Protect dan beberapa aplikasi m-banking mendeteksi aplikasi ini sebagai Spyware/Malware.**
 
-*   Cara install, **WAJIB** ke Play Store -> klik Profil -> **Play Protect** -> klik ikon gir (⚙️) -> **Matiin fitur "Scan apps with Play Protect"**. **WAJIB** Aktifkan Special apps/access notification & accessibility untuk aplikasi ini di pengaturan hp TARGET/CLIENT
-*   Proyek ini *HANYA* Untuk **Edukasi** atau pantau HP anak/family yang memang sudah janjian! Jika dipakai untuk hal menyimpang (nyadap pacar, dsb) tanpa ada kesepakatan, risiko ditanggung sendiri!, **DEVELOPER TIDAK BERTANGGUNG JAWAB ATAS PENYALAHGUNAAN APLIKASI INI!**
+*   Cara install, **WAJIB** ke Play Store -> klik Profil -> **Play Protect** -> klik ikon gir (⚙️) -> **Matikann fitur "Scan apps with Play Protect"**. **WAJIB Aktifkan Special apps/access notification & accessibility untuk aplikasi ini di pengaturan hp TARGET/CLIENT**
+*   Proyek ini **HANYA Untuk Edukasi** atau pantau HP anak/family , Jika dipakai untuk hal menyimpang (menyadap pacar, dsb) tanpa ada kesepakatan, risiko ditanggung sendiri! **DEVELOPER TIDAK BERTANGGUNG JAWAB ATAS PENYALAHGUNAAN APLIKASI INI!**
 
 ## Lisensi
 MIT License bebas pakai 🍻
