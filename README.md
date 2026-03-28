@@ -17,14 +17,14 @@ STRIX adalah aplikasi Monitoring tool untuk Android
 2. Klik **Add project** , beri nama, dan lanjutkan sampai selesai.
 
 ### 2. Copy Kredensial (WEB API Key, App ID, Project ID)
-1. Di halaman utama Firebase Console (dalam project yang baru dibuat), klik logo **Android** atau ikon gear ⚙️ **Project settings** (Pengaturan Proyek).
-2. Tambahkan aplikasi Android. Masukkan **Package Name** `com.strix.safesync`
-3. Setelah aplikasi Android terdaftar, scroll ke bawah ke bagian **Your apps** (Aplikasi Anda) di dalam Project Settings.
-4. Di situ akan ada:
+1. Di halaman utama Firebase Console (dalam project yang baru dibuat), klik logo **Add app** lalu pilih platform **Android**.
+2. Masukkan **Android Package Name** `com.strix.safesync` lalu pilih Register app , pengaturan yang lainnya biarkan default saja.
+3. Setelah aplikasi Android terdaftar klik nama aplikasi yang baru di daftarkan tadi dan pilih ikon gear (⚙️).
+4. Di tab *General* akan ada:
    - **App ID**
    - **Project ID**
    - **Web API Key**
-   NOTE : jika web api key tidak muncul , klik **add app** lalu pilih icon WEB **</>**
+   NOTE : jika web api key tidak muncul , pilih **Add app** di bagian **your app** pilih icon WEB **</>** dan isi Nickname/nama bebas kemudian **Register app** setelah itu akan muncul web api key dengan nama apiKey setelah itu pilih **continue to console**.
 
 ### 3. Aktifkan Layanan Firebase
 Sebelum mulai dipakai, **Wajib** mengaktifkan layanan berikut di panel sebelah kiri Firebase Console:
