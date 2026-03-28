@@ -1,6 +1,6 @@
 # STRIX 🦉
 
-STRIX adalah aplikasi Monitoring tool untuk Android
+STRIX adalah aplikasi Monitoring tool untuk Android. Download APK versi [terbaru](https://github.com/eosap98/STRIX/releases) 
 
 ## Fitur ✨
 
