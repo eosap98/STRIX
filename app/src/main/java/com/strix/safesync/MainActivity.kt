@@ -84,9 +84,14 @@ class MainActivity : ComponentActivity() {
         
         requestPermissions()
 
-        FirebaseManager.initialize { code ->
-            Log.d("SafeSync", "My code: $code")
-            scheduleDataSync()
+        val prefs = getSharedPreferences("SafeSyncCustomServer", Context.MODE_PRIVATE)
+        val isServerConfigured = !prefs.getString("apiKey", "").isNullOrBlank()
+
+        if (isServerConfigured) {
+            FirebaseManager.initialize { code ->
+                Log.d("SafeSync", "My code: $code")
+                scheduleDataSync()
+            }
         }
 
         appMode = loadSavedAppMode()
@@ -231,14 +236,21 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun AppNavigation() {
+        val context = LocalContext.current
+        var isServerConfigured by remember { 
+            mutableStateOf(!context.getSharedPreferences("SafeSyncCustomServer", Context.MODE_PRIVATE).getString("apiKey", "").isNullOrBlank())
+        }
+        
         // For CLIENT: track whether the secret PIN has been entered yet
         var isClientUnlocked by remember { mutableStateOf(false) }
-        val context = LocalContext.current
         val stealthAlias = remember { context.getSharedPreferences("SafeSyncPrefs", Context.MODE_PRIVATE).getString("stealthAlias", null) }
         
         when {
             appMode == AppMode.NONE -> {
-                ModeSelectionScreen { mode -> saveAppMode(mode) }
+                ModeSelectionScreen(
+                    isServerConfigured = isServerConfigured,
+                    onConfigured = { isServerConfigured = true }
+                ) { mode -> saveAppMode(mode) }
             }
             appMode == AppMode.CLIENT && !isClientUnlocked -> {
                 val onUnlockCallback = { isClientUnlocked = true }
@@ -271,8 +283,8 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
-    fun ModeSelectionScreen(onModeSelected: (AppMode) -> Unit) {
-        var showCustomServerDialog by remember { mutableStateOf(false) }
+    fun ModeSelectionScreen(isServerConfigured: Boolean = true, onConfigured: () -> Unit = {}, onModeSelected: (AppMode) -> Unit) {
+        var showCustomServerDialog by remember { mutableStateOf(!isServerConfigured) }
         var showGuideScreen by remember { mutableStateOf(false) }
         val context = LocalContext.current
 
@@ -388,14 +400,22 @@ class MainActivity : ComponentActivity() {
 
         if (showCustomServerDialog) {
             CustomFirebaseDialog(
-                onDismiss = { showCustomServerDialog = false },
-                context = context
+                onDismiss = { 
+                    if (!context.getSharedPreferences("SafeSyncCustomServer", Context.MODE_PRIVATE).getString("apiKey", "").isNullOrBlank()) {
+                        showCustomServerDialog = false
+                        onConfigured()
+                    } else {
+                        Toast.makeText(context, "Harap isi kredensial terlebih dahulu!", Toast.LENGTH_SHORT).show()
+                    }
+                },
+                context = context,
+                isConfigured = isServerConfigured
             )
         }
     }
 
     @Composable
-    fun CustomFirebaseDialog(onDismiss: () -> Unit, context: Context) {
+    fun CustomFirebaseDialog(onDismiss: () -> Unit, context: Context, isConfigured: Boolean = true) {
         val prefs = context.getSharedPreferences("SafeSyncCustomServer", Context.MODE_PRIVATE)
         var apiKey by remember { mutableStateOf(prefs.getString("apiKey", "") ?: "") }
         var appId by remember { mutableStateOf(prefs.getString("appId", "") ?: "") }
@@ -407,7 +427,7 @@ class MainActivity : ComponentActivity() {
             title = { Text("Custom Firebase Server", fontWeight = FontWeight.Bold) },
             text = {
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("Gunakan kredensial Firebase Anda sendiri untuk kontrol privasi penuh. Kosongkan untuk menggunakan server bawaan.", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+                    Text("Perbarui kredensial Firebase Anda di sini. ${if (!isConfigured) "Kredensial wajib diisi!" else ""}", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
                     OutlinedTextField(value = apiKey, onValueChange = { apiKey = it.trim() }, label = { Text("Web API Key") }, singleLine = true)
                     OutlinedTextField(value = appId, onValueChange = { appId = it.trim() }, label = { Text("App ID (1:xxx:android:yyy)") }, singleLine = true)
                     OutlinedTextField(value = projectId, onValueChange = { projectId = it.trim() }, label = { Text("Project ID") }, singleLine = true)
@@ -422,28 +442,43 @@ class MainActivity : ComponentActivity() {
                         .putString("projectId", projectId)
                         .putString("storageBucket", storageBucket)
                         .apply()
-                    Toast.makeText(context, "Tersimpan! Memulai ulang aplikasi...", Toast.LENGTH_LONG).show()
+                        
+                    try {
+                        if (com.google.firebase.FirebaseApp.getApps(context).isEmpty()) {
+                            val options = com.google.firebase.FirebaseOptions.Builder()
+                                .setApiKey(apiKey)
+                                .setApplicationId(appId)
+                                .setProjectId(projectId)
+                                .setStorageBucket(if (storageBucket.isBlank()) "$projectId.appspot.com" else storageBucket)
+                                .build()
+                            com.google.firebase.FirebaseApp.initializeApp(context, options)
+                            com.strix.safesync.data.FirebaseManager.initialize { code ->
+                                android.util.Log.d("SafeSync", "My code: $code")
+                            }
+                            Toast.makeText(context, "Server Terhubung!", Toast.LENGTH_SHORT).show()
+                        } else {
+                            Toast.makeText(context, "Tersimpan! Memulai ulang aplikasi...", Toast.LENGTH_LONG).show()
+                            val intent = context.packageManager.getLaunchIntentForPackage(context.packageName)
+                            val componentName = intent?.component
+                            val mainIntent = Intent.makeRestartActivityTask(componentName)
+                            context.startActivity(mainIntent)
+                            Runtime.getRuntime().exit(0)
+                            return@Button
+                        }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        Toast.makeText(context, "Error: ${e.message}", Toast.LENGTH_LONG).show()
+                    }
                     onDismiss()
-                    // Restart app
-                    val intent = context.packageManager.getLaunchIntentForPackage(context.packageName)
-                    intent?.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                    context.startActivity(intent)
-                    Runtime.getRuntime().exit(0)
                 }) {
-                    Text("Simpan & Restart")
+                    Text("Simpan")
                 }
             },
             dismissButton = {
-                TextButton(onClick = {
-                    prefs.edit().clear().apply()
-                    Toast.makeText(context, "Dikembalikan ke rute awal! Memulai ulang aplikasi...", Toast.LENGTH_SHORT).show()
-                    // Restart app
-                    val intent = context.packageManager.getLaunchIntentForPackage(context.packageName)
-                    intent?.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                    context.startActivity(intent)
-                    Runtime.getRuntime().exit(0)
-                }) {
-                    Text("Kembalikan ke Default", color = Color.Red)
+                if (isConfigured) {
+                    TextButton(onClick = onDismiss) {
+                        Text("Batal", color = Color.Gray)
+                    }
                 }
             }
         )

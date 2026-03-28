@@ -33,15 +33,9 @@ class SafeSyncApp : Application() {
                 Log.d("SafeSyncApp", "Initialized CUSTOM Firebase project: $projectId")
             } catch (e: Exception) {
                 Log.e("SafeSyncApp", "Failed to init custom Firebase", e)
-                FirebaseApp.initializeApp(this)
             }
         } else {
-            try {
-                FirebaseApp.initializeApp(this)
-                Log.d("SafeSyncApp", "Initialized DEFAULT Firebase project")
-            } catch (e: Exception) {
-                Log.e("SafeSyncApp", "Failed to init default Firebase. Missing google-services.json?", e)
-            }
+            Log.d("SafeSyncApp", "No custom Firebase configured yet. Waiting for user setup.")
         }
     }
 }
