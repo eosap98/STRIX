@@ -42,7 +42,7 @@ Sebelum mulai dipakai, **Wajib** mengaktifkan layanan berikut di panel sebelah k
    - **Web API Key**: `AIzaSy...`
    - **App ID**: `1:xxxx:android:yyyy`
    - **Project ID**: `nama-project`
-4. Tekan **Save & Restart**. Selesai! Aplikasi akan terhubung otomatis ke server pribadi.
+4. Tekan **Simpan & Restart**. Selesai! Aplikasi akan terhubung otomatis ke server pribadi.
 
 ## Google Play Protect! ⚠️
 
