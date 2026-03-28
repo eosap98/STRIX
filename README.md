@@ -37,12 +37,11 @@ Sebelum mulai dipakai, **Wajib** mengaktifkan layanan berikut di panel sebelah k
 
 ### 4. Input di Aplikasi STRIX
 1. Buka aplikasi.
-2. Di halaman awal "Select Your Role", klik tombol **⚙️ Custom Server Config** di paling bawah.
-3. Masukkan ke-3 data tersebut yang sudah di copy dari firebase console:
+2. Masukkan ke-3 data tersebut yang sudah di copy dari firebase console:
    - **Web API Key**: `AIzaSy...`
    - **App ID**: `1:xxxx:android:yyyy`
    - **Project ID**: `nama-project`
-4. Tekan **Simpan & Restart**. Selesai! Aplikasi akan terhubung otomatis ke server pribadi.
+3. Tekan **Simpan**. Selesai! Aplikasi akan terhubung otomatis ke server pribadi.
 
 ## Google Play Protect! ⚠️
 
