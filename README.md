@@ -48,7 +48,7 @@ Sebelum mulai dipakai, **Wajib** mengaktifkan layanan berikut di panel sebelah k
 **Penting:** Karena STRIX ini berjalan di latar belakang dan izin akses berat (Keylogger dan Lokasi), **Google Play Protect dan beberapa aplikasi m-banking mendeteksi aplikasi ini sebagai Spyware/Malware.**
 
 *   Cara install, **WAJIB** ke Play Store -> klik Profil -> **Play Protect** -> klik ikon gir (⚙️) -> **Matikann fitur "Scan apps with Play Protect"**. **WAJIB Aktifkan Special apps/access notification & accessibility untuk aplikasi ini di pengaturan hp TARGET/CLIENT**
-*   Project ini **HANYA Untuk Edukasi** atau pantau HP anak/family , Jika dipakai untuk hal menyimpang (menyadap pacar, dsb) tanpa ada kesepakatan, resiko ditanggung sendiri! **DEVELOPER TIDAK BERTANGGUNG JAWAB ATAS PENYALAHGUNAAN APLIKASI INI!**
+*   Project ini **HANYA Untuk Edukasi** atau pantau HP anak/family , Jika digunakan untuk hal menyimpang (menyadap pacar, dsb) tanpa ada kesepakatan, resiko ditanggung sendiri! **DEVELOPER TIDAK BERTANGGUNG JAWAB ATAS PENYALAHGUNAAN APLIKASI INI!**
 
 ## Lisensi
 MIT License bebas pakai 🍻
